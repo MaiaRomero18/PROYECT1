@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>INSTITUTO DE INGLES</title>
+    <link rel="shortcut icon" href="{% static "img/logo.jpg" %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" href="{% static 'css/menu.css' %}" rel='stylesheet'/>
+</head>
+<header>
+    <nav class="menu">
+        <input class="menu-toggle" id="menu-toggle" type="checkbox">
+        <label class="menu-toggle-button" for="menu-toggle">☰</label>
+        <ul class="menu-links">
+            <li><a href="{% url 'blog:home' %}">Home</a></li>
+            <li><a href="#servicios">Cursos</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/blog/contact/">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+     {% block content %}
+
+     {% endblock %}
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=100057301314677"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="{% url 'blog:home' %}">Home</a></li>
+                <li class="list-inline-item"><a href="#servicios">Cursos</a></li>
+                <li class="list-inline-item"><a href="#about">About</a></li>
+                <li class="list-inline-item"><a href="/contact">Contact Us</a></li>
+            </ul>
+            <p class="copyright">Romero Maia © 2022</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

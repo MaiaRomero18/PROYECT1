@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+<head>
+    <link rel="shortcut icon" href="{% static "img/logo.jpg" %}">
+    <meta charset="utf-8"/>
+    <xmeta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+    <title>CAMPUS VIRTUAL</title>
+    <link type="text/css" href="{% static '/css/base_alumnos.css' %}" rel='stylesheet'/>
+</head>
+<body>
+    <ul>
+        <li>
+            <a class="active" href="{% url 'blog:home' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Home
+            </a>
+        </li>
+        <li>
+            <a class="active" href="{% url 'alumno:editar' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Perfil
+            </a>
+        </li>
+        <li>
+            <a class="active" href="{% url 'alumno:editarpass' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Editar Perfil
+            </a>
+        </li>
+        <li>
+            <a class="active" href="#">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Foro de consultas
+            </a>
+        </li>
+        <li>
+            <a class="active" href="{% url 'alumno:tasks' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Tarea
+            </a>
+        </li>
+        <li>
+            <a class="active" href="{% url 'alumno:create' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Crear tareas
+            </a>
+        </li>
+        <li>
+            <a class="active" href="">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Detalles de las Tareas
+            </a>
+        </li>
+
+        <li>
+            <a class="active" href="{% url 'alumno:cerrar_sesion' %}">
+                <i class="fa fa-lightbulb-o fa-lg"></i>
+                <span class="nav-text">Cerrar Sesion
+            </a>
+        </li>
+    </ul> 
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">                                
+        {% block content %}    
+        {% endblock content %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'alumnos/base_alumnos.html' %}
+
+{% block content %}
+
+    <h1>{{task.title}}</h1>
+    {{error}}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            GUARDAR
+        </button>
+    </form>
+
+    <form action="{% url 'alumno:complete' task.id %}" method="POST">
+        {% csrf_token %}    
+        <button>
+            COMPLETADO
+        </button>
+    </form>
+    <form action="{% url 'alumno:complete' task.id %}" method="POST">
+        {% csrf_token %}    
+        <button>
+            ELIMINAR
+        </button>
+    </form> 
+{% endblock %}

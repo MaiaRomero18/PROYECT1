@@ -1,0 +1,46 @@
+:root{
+--color: #333; 
+}
+body{
+    margin: 0px;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: var(--color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-dia-mundial-arte-dibujado-mano_23-2149332776.jpg?w=2000);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+p {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}

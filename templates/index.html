@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTITUTO DE INGLES C&E</title>
+    <link type="text/css" href="{% static 'css/index.css' %}" rel='stylesheet'/>
+</head>
+<body>
+    <div class="container">
+        <h1>Instituto de ingles C&E</h1>
+        <p>Les damos la bienvenida al instituto, nos enogullese seguir creciendo y motivando a más personas a poder aprender este hermoso idioma, que nos abre muchas puertas...</p>
+        <a href="#info">Conoce mas</a>
+      </div>
+      
+      <div class="blank"></div>
+      
+      <div class="container second">
+        <div id='info' class="item">
+          <div class="img img-first"></div>
+          <div class="card">
+            <h3>NUESTRO BLOG</h3>
+            <p>Aca podra encontrar toda la informacion sobre el instituto</p>
+            <a href="{% url 'blog:home' %}">click</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="img img-second"></div>
+          <div class="card">
+            <h3>Alumnos</h3>
+            <p>Ingreso a la plataforma para nuestos estudiantes</p>
+            <a href="{% url 'alumno:home' %}">click</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="img img-third"></div>
+          <div class="card">
+            <h3>Profesores</h3>
+            <p>Ingreso a la plataforma para nuestos profesores</p>
+            <a href="#">click</a>
+          </div>
+        </div>
+    </div>
+      <div class="blank"></div>
+</body>
+</html>

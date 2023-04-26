@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <link type='text/css' href='{% static 'css/base.css' %}' rel='stylesheet'>
+    </head>
+    <body>
+        <article>
+            <div class="slider">
+                <ul>
+                    <li><img src='{% static "img/fondo1.jpg" %}' alt=""></li>
+                    <li><img src='{% static "img/fondo2.jpg" %}' alt=""></li>
+                    <li><img src='{% static "img/fondo3.jpg" %}' alt=""></li>
+                    <li><img src='{% static "img/fondo4.jpg" %}' alt=""></li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div>
+                <a href=""><button class="btn">CONOCE MAS</button></a>
+            </div>
+        </article>
+        <h1><span data-shadow-text="Text-Shadow">Instituto de Ingles C&E</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet veritatis, quia doloremque eos quod reiciendis explicabo earum temporibus, optio dignissimos qui, unde soluta aliquid nulla natus quo quaerat sit similique totam amet? Atque, temporibus neque! Quae, consequatur. Velit distinctio cumque accusamus sed! Repellendus culpa veniam unde assumenda fugiat quasi, suscipit, deleniti nam quis officia quidem. Voluptas, quis odit nobis ab facere assumenda sapiente voluptates quod! Magnam, officia debitis rerum velit minima explicabo reiciendis ab atque expedita, mollitia repellat maxime deleniti culpa dicta tempore minus veniam autem alias libero voluptate? Voluptatem eos ex veritatis assumenda animi, ad praesentium quibusdam ratione?</p>
+        <div>
+            <h1 id="about"><span data-shadow-text="Text-Shadow">Nuestro staff</span></h1>
+            {% include 'profile.html' %}
+        </div>
+        <div>
+            <h1 id="servicios"><span data-shadow-text="Text-Shadow">Sobre nuestros cursos</span></h1>
+            {% include 'servicios.html' %}
+        </div>
+    </body>
+</html>
+{% endblock %}

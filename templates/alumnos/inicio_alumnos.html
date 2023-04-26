@@ -1,0 +1,20 @@
+{% block content  %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static "img/logo.jpg" %}">
+    <title>Campus virtual</title>
+    <link type="text/css" href="{% static 'css/inicio_alumnos.css' %}" rel='stylesheet'/>
+</head>
+<body>
+    <div class="container">
+        <h1>Campus virtual alumnos</h1>
+        <p>Bienvenidos al nuevo campus virtual</p>
+        <a href="{% url 'alumno:logear' %}">INGRESE</a>
+      </div>
+    </body>
+{% endblock  %}

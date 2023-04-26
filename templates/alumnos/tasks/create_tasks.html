@@ -1,0 +1,13 @@
+{% extends 'alumnos/base_alumnos.html' %}
+
+{% block content %}
+<h1>CREAR TAREA</h1>
+{{error}}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>
+        GUARDAR
+    </button>
+</form>
+{% endblock %}
